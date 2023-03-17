@@ -1,0 +1,98 @@
+@import "../../global.scss";
+
+.card{
+    background-color: lightseagreen;
+    width: 250px;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgb(76, 76, 76);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    transition: all 1s ease;
+
+    @include mobile{
+        height: 180px;
+        margin: 10px 0;
+    }
+
+    &.featured{
+        width: 300px;
+        height: 75%;
+        margin: 0 40px;
+
+        @include mobile{
+            width: 250px;
+            height: 180px;
+            margin: 1px;
+        }
+    }
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            &.left,&.right{
+                height: 25px;
+            }
+
+            &.user{
+                height: 65px;
+                width: 65px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin: 0 30px;
+
+                @include mobile{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    .center{
+        background-color: rgb(181, 253, 231);
+        box-shadow: 0 0 5px 0.5px gray ; 
+        padding: 10px;
+        border-radius: 10px; 
+        
+        @include mobile{
+            font-size: 12px;
+            padding: 5px;
+        }
+        
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3{
+            margin-bottom: 8px;
+
+            @include mobile{
+                font-size: 14px;
+            }
+        }
+
+        h4{
+            color: rgb(113, 113, 113);
+
+            @include mobile{
+                font-size: 13px;
+            }
+        }
+    }
+
+}

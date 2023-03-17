@@ -1,0 +1,126 @@
+
+@import "../../global.scss";
+
+.contact{
+    background-color: lightsteelblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include mobile{
+        flex-direction: column;
+    }
+
+    .left{
+        flex: 1;
+
+        img{
+            width: 750px;
+            height: 650px;
+            background-color: white;
+            border-radius: 35%;
+            background-color: lightsteelblue;
+
+            @include mobile{
+                width: 500px;
+                height: 300px;
+            }
+        }
+
+    }
+
+    .right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: baseline;
+
+        @include mobile{
+            overflow: hidden;
+        }
+
+        h1{
+            margin-bottom: 50px;
+            font-size: 40px;
+
+            @include mobile{
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+        }
+
+        form{
+            background-color: rgb(251, 121, 121);
+            border-radius: 20px;
+            width: 350px;
+            height: 370px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            transition: all 1s linear;
+            
+
+            input{
+                width: 300px;
+                height: 30px;
+                padding: 5px;
+                outline: none;
+                border-radius: 10px;
+                border: none;
+                transition: all 0.3s linear;
+
+                @include mobile{
+                    margin-top: 10px;
+                    width:200px;
+                    height: 20px;
+                }
+
+                &:hover{
+                    transform: scale(1.04);
+                }
+            }
+
+            textarea{
+                width: 300px;
+                height: 150px;
+                border-radius: 10px;
+                transition: all 0.3s linear;
+                outline: none;
+                padding: 5px;
+
+                @include mobile{
+                    width: 200px;
+                    height: 100px;
+                }
+
+                &:hover{
+                    transform: scale(1.04);
+                }
+            }
+
+            button{
+                padding: 10px;
+                border-radius: 5px;
+                color: rgb(251, 121, 121);
+                font-weight: bold;
+                font-size: 18px;
+                background-color: lightblue;
+                border: none;
+                transition: all 0.2s linear;
+                cursor: pointer;
+                
+                &:hover{
+                    transform: scale(1.07);
+                }
+            }
+
+            span{
+                color: white;
+                font-weight: bold;
+            }
+
+        }
+    }
+}

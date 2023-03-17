@@ -1,0 +1,114 @@
+@import "../../global.scss";
+
+.intro{
+    background-color: white;
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left{
+        flex: 0.5;
+        overflow: hidden;
+
+        .imgContainer{
+            width: 750px;
+            height: 730px;
+            overflow: hidden;
+            background-color: crimson;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: right;
+
+            @include mobile{
+                align-items: flex-start;
+            }
+            
+            img{
+                height: 89%;
+                transition: all 1s ease;
+
+                @include mobile{
+                    height: 50%;
+                }
+
+                &:hover{
+                    transform: scale(1.02);
+                }
+            }
+
+        }
+    }
+    .right{
+        padding: 30px;
+        flex: 0.6;
+
+        .wrapper{
+            height: 100%;
+            width: 100%;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include mobile{
+                text-align: center;
+                padding-left: 0;
+                align-items: center;
+            }
+
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+
+                @include mobile{
+                    font-size: 40px;
+                }
+            }
+            h2{
+                font-size: 35px;
+            }
+            h3{
+                font-size: 30px;
+                
+                @include mobile{
+                    font-size: 20px;
+                }
+
+                span{
+                    color: crimson;
+                }
+            }
+
+            a{
+                position: absolute;
+                bottom: 20px;
+                left: 60%;
+                overflow: hidden;
+                
+                img{
+                    width: 40px;
+                    animation: arrowBlink 5s infinite;
+                    transition: all 1s linear;
+
+                    &:hover{
+                        transform: scale(1.5);
+                    }
+                }
+
+                @keyframes arrowBlink {
+                    100%{
+                        opacity: 0  ;
+                    }
+                    50%{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
